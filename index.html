@@ -1,0 +1,11 @@
+<p>Servidor usado para transferir arquivos de um dispositivo pra outro do trin trin</p>
+    <form class="flex">
+      <p><input type="text" name="name" class="input" required placeholder="Nome do arquivo"/></p>
+      <p><input type="submit" class="button" value="Baixar" /></p>
+</form>
+<script>
+  $("form").submit(function(event) {
+    event.preventDefault();
+    window.location.href = "/" + $("input[name=name]").val();
+  });
+</script>
